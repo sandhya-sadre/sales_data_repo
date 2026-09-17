@@ -18,7 +18,7 @@ df = pd.read_csv('sales_data.csv')
 @app.route('/total_revenue', methods=['GET'])
 def get_total_revenue():
     total_revenue = df['sales'].sum()
-    return jsonify({'total_revenue': int(total_revenue)})
+    return jsonify({'total_revenue collected': int(total_revenue)})
 
 @app.route('/highest_region', methods=['GET'])
 def get_highest_region():
